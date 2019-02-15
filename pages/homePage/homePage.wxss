@@ -1,0 +1,146 @@
+/* pages/homePage/homePage.wxss */
+.container{
+  /* height: 100vh; */
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: '苹方';
+   color:#3c5f81;
+}
+/* 大图 */
+.title{
+  text-align: center;
+  /* margin-top:20rpx; */
+}
+.title .bigImg{
+  width:400rpx;
+  height:400rpx;
+}
+/* 主体 */
+.content{
+  display: flex;
+  margin-bottom:30rpx;
+  height:200rpx;
+  /* justify-content: center; */
+  align-items:flex-end ;
+  /* border: 1rpx solid black; */
+}
+
+.life{
+  height: 150rpx;
+}
+.lifeBox{
+  height:100%;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+/* 主体左边 */
+.left-content{
+   text-align: right;
+  flex:5;
+  padding-right: 35rpx;
+   font-size:60rpx;
+   font-weight: 400;
+    border-right:1px solid rgba(149, 149, 149, .5);
+}
+
+.left-city{
+  font-size:45rpx;
+  font-weight: 500;
+}
+.weizhi{
+  width:40rpx;
+  height: 40rpx;
+  vertical-align:middle;
+  
+}
+
+/* 主体右边 */
+.right-content{
+  text-align: left;
+  flex: 5;
+  padding-left: 35rpx;
+  border-left:1px solid rgba(191, 191, 191, .3);
+}
+
+.big{
+  font-size:220rpx;
+  line-height: 110rpx;
+  font-weight: 600
+}
+
+
+/* date部分 */
+
+.date{
+  text-align: center;
+  font-size:35rpx;
+  margin-bottom:40rpx;
+  letter-spacing: 2rpx;
+}
+.date text{
+  display: inline-block;
+  padding:0 15rpx;
+  /* border:4rpx solid rgba(149, 149, 149, .5); */
+  border-top:none;
+  border-bottom:none;
+}
+
+/* life部分 */
+.life{
+  text-align: center;
+  font-size:28rpx;
+  display: flex;
+  flex-direction: column;
+  width:550rpx;
+  margin: 0 auto 50rpx;
+}
+
+/* bottom 明后俩天部分*/
+.bottom{
+  display: flex;
+}
+
+
+.bottom-left, .bottom-right{
+  /* display: flex; */
+  padding-left:20rpx;
+  padding-right:20rpx;
+  flex:5;
+}
+
+.bottom-left{
+  border-right:1px solid rgba(149, 149, 149, .5);
+ 
+}
+.bottom-right{
+  border-left:1px solid rgba(191, 191, 191, .3);
+}
+.time{
+ display: flex;
+ justify-content: space-between;
+}
+.day{
+  flex:6;
+}
+.temperature{
+  flex:3;
+  margin-right:15rpx;
+}
+ .weather{
+  display: flex;
+ justify-content: space-between;
+ }
+.mintext{
+  line-height: 130rpx;
+}
+.minImg{
+  width:150rpx;
+  height:150rpx;
+  vertical-align: middle;
+}

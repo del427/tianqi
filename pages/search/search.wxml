@@ -1,0 +1,37 @@
+<!--pages/search/search.wxml-->
+<view class='container'>
+  <view class='input-container'>
+    <view class='inputBox'>
+      <image src='../../image/icon/放大镜.png' class='Magnifier'></image>
+      <input class='input' placeholder='{{placeholder}}' bindconfirm='conFirm' bindblur='onBlur' bindinput='onInput'></input>
+    </view>
+    <text class='btn' catchtap='conFirm'>取消</text>
+  </view>
+  <view hidden='{{!key}}' class='btnBox'>
+    <view class='options'>
+      <view class='title'>看看有你想要的没</view>
+      <view class='items'>
+        <text class='item active' data-item='定位' catch:tap='onTap'>定位</text>
+        <text class='item' wx:for='{{items}}' wx:key='{{index}}' data-item='{{item}}' catch:tap='onTap'>{{item}}</text>
+      </view>
+    </view>
+    <view class='record'>
+      <view class='title'>
+        <text>历史记录</text>
+        <view class='title-right' catchtap='onClear'>
+          <image class='minImg' src='../../image/icon/垃圾桶.png'></image>
+          <text>清空</text>
+        </view>
+      </view>
+      <view class='items'>
+        <text class='item' wx:for="{{History}}" wx:key='{{index}}'catchtap='onTap'>{{item}}</text>
+      </view>
+    </view>
+  </view>
+  <view hidden='{{key}}'class='toastBox'>
+    <view class='itemBox' hidden='{{textKey}}'>
+      <view class='itemBox-item' wx:for='{{basic}}' wx:key="{{index}}" data-item='{{item.location}}' catchtap='onTap'>{{item.location}}.{{item.parent_city}}.{{item.admin_area}}</view>
+    </view>
+    <view class='toast' hidden='{{!textKey}}'>很遗憾!没有找到该城市- -</view>
+  </view>
+</view>

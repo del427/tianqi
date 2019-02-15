@@ -1,0 +1,52 @@
+<!--pages/homePage/homePage.wxml-->
+<view class='container'>
+  <view class='title'>
+    <image src="../../image/{{now.cond_code}}.png" class='bigImg'></image>
+  </view>
+  <view class='content'>
+    <view class='left-content'>
+      <view class='left-weather'>{{now.cond_txt}}</view>
+      <view class='left-city' catchtap='onCity'>
+        <image src='../../image/icon/weizhi.png' class='weizhi'></image>
+        <text>{{basic.location}}</text>
+      </view>
+    </view>
+    <view class='right-content'>
+      <view class>
+        <text class='big'>{{now.tmp}}</text>℃</view>
+    </view>
+  </view>
+  <view class='date'>
+    <text>{{daily[0].date}}</text>
+  </view>
+  <view class='life'>
+    <scroll-view scroll-y='{{true}}' class='lifeBox'>
+      <text>{{life[2].txt}}</text>
+      <text>{{life[1].txt}}</text>
+    </scroll-view>
+    
+  </view>
+  <view class='bottom'>
+    <view class='bottom-left'>
+      <view class='time'>
+        <text class='day'>明天</text>
+        <text class='temperature'>{{daily[1].tmp_max}}/{{daily[1].tmp_min}}</text>
+      </view>
+      <view class='weather'>
+         <text class='mintext'>{{daily[1].cond_txt_d}}</text>
+         
+        <image class='minImg' src='../../image/{{hour > 18 ? daily[1].cond_code_d : daily[1].cond_code_n}}.png'></image>
+      </view>
+    </view>
+    <view class='bottom-right'>
+      <view class='time'>
+        <text class='day'>后天</text>
+        <text class='temperature'>{{daily[2].tmp_max}}/{{daily[2].tmp_min}}</text>
+      </view>
+      <view class='weather'>
+        <text class='mintext'>{{daily[2].cond_txt_d}}</text>
+        <image class='minImg' src='../../image/{{hour > 18 ? daily[2].cond_code_d : daily[2].cond_code_n}}.png'></image>
+      </view>
+    </view>
+  </view>
+</view>

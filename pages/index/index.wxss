@@ -1,0 +1,37 @@
+/* pages/index/index.wxss */
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+}
+
+.title-one {
+  flex: 8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: '苹方';
+  font-weight: 500;
+  font-size:45rpx;
+}
+
+.title-two {
+  flex: 2;
+  font-weight: 400;
+  font-family: '苹方';
+  position:relative;
+  
+}
+.title-two::after{
+  display: block;
+  content:'';
+  width:250rpx;
+  height:1rpx;
+  background:black;
+  position: absolute;
+  left:50%;
+  margin-left:-125rpx;
+}
